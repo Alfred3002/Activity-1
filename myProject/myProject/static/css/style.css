@@ -1,19 +1,49 @@
 /* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #000;
+    color: #fff;
 }
 
-/* Header styles */
-h1 {
-    background-color: #4CAF50;
-    color: white;
+/* Navbar styles */
+nav {
+    background-color: #444;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Main content styles */
+main {
     padding: 20px;
     text-align: center;
-    margin: 0;
+    background-color: #000;
+    margin-top: 60px; /* Adjust this value if needed to avoid overlap with the fixed navbar */
 }
 
 /* Paragraph styles */

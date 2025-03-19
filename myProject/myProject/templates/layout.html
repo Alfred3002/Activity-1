@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            MY PROJECT
+        {% endblock %}
+    </title>
+    <!-- for design  -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- for js  -->
+    <script src="{% static 'js/main.js' %}" defer></script>
+    <!-- for favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico'%}">
+</head>
+<body>
+
+    <nav>
+        <a href="/"> Home</a>
+        <a href="/about"> About</a>
+        <a href="/post"> Post</a>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+</body>
+</html>
