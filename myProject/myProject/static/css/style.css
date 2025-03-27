@@ -46,6 +46,19 @@ main {
     margin-top: 60px; /* Adjust this value if needed to avoid overlap with the fixed navbar */
 }
 
+.post h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: left;
+}
+
+.post p {
+    padding: 5px;
+    text-align: left;
+    margin-top: 10px 0;
+}
+
 /* Paragraph styles */
 p {
     padding: 20px;

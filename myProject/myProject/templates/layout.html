@@ -23,7 +23,7 @@
     <nav>
         <a href="/"><i class="fas fa-home"></i> Home</a>
         <a href="/about"><i class="fas fa-info-circle"></i> About</a>
-        <a href="/post"><i class="fas fa-list"></i> Post</a>
+        <a href="{% url 'post_list' %}"><i class="fas fa-list"></i> Post</a>
     </nav>
     <main>
         {% block content %}
