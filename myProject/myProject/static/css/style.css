@@ -15,7 +15,7 @@ body {
 
 /* Navbar styles */
 nav {
-    background-color: #444;
+    background-color: #000;
     padding: 10px 0;
     text-align: center;
     position: fixed;
@@ -34,7 +34,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #555555;
     border-radius: 5px;
 }
 
@@ -46,6 +46,32 @@ main {
     margin-top: 60px; /* Adjust this value if needed to avoid overlap with the fixed navbar */
 }
 
+/* Heading styles */
+h1 {
+    font-size: 2rem; /* Explicit font size */
+    margin: 20px 0; /* Add spacing above and below */
+    color: #4CAF50; /* Green color for emphasis */
+    text-align: center;
+}
+
+/* Unordered list styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px; /* Corrected syntax */
+}
+
+ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+ul li strong {
+    color: #4CAF50;
+}
+
+/* Post styles */
 .post h2 {
     margin: 10px 0;
     font-size: 1.5rem;
@@ -56,13 +82,15 @@ main {
 .post p {
     padding: 5px;
     text-align: left;
-    margin-top: 10px 0;
+    margin: 10px 0; /* Corrected syntax */
+    color: #ccc; /* Optional: Light gray for readability */
 }
 
 /* Paragraph styles */
 p {
     padding: 20px;
     text-align: center;
+    line-height: 1.6; /* Improve readability */
 }
 
 /* Link styles */
