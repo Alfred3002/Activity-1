@@ -9,6 +9,8 @@
             MY PROJECT
         {% endblock %}
     </title>
+    {% comment %} google fonts {% endcomment %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- for design  -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- for js  -->
@@ -21,14 +23,20 @@
 <body>
 
     <nav>
-        <a href="/"><i class="fas fa-home"></i> Home</a>
-        <a href="/about"><i class="fas fa-info-circle"></i> About</a>
-        <a href="{% url 'post_list' %}"><i class="fas fa-list"></i> Post</a>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="/" class="{% if request.path == '/' %}active{% endif %}"><i class="fas fa-home"></i> Home</a>
+                <a href="/about" class="{% if request.path == '/about' %}active{% endif %}"><i class="fas fa-info-circle"></i> About Me</a>
+                <a href="{% url 'post_list' %}" class="{% if request.path == '/post/' %}active{% endif %}"><i class="fas fa-list"></i> Post</a>
+            </div>
+            <div class="nav-logo">
+                <img src="{% static 'images/logo.jpg' %}" alt="Logo">
+            </div>
+        </div>
     </nav>
     <main>
         {% block content %}
         {% endblock %}
-    </main>
-    
+    </main>       
 </body>
 </html>

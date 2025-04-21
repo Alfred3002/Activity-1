@@ -6,36 +6,58 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #fff;
+    background-color: #1e1e2f;
+    color: #e4e4e7;
 }
 
 /* Navbar styles */
 nav {
-    background-color: #000;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #2c2c3e; /* Dark gray background */
+    padding: 15px 20px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-nav a {
-    color: #fff;
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Space between links and logo */
+    align-items: center; /* Vertically align items */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Add spacing between links */
+}
+
+.nav-links a {
+    color: #e4e4e7; /* Light gray text */
     text-decoration: none;
     font-weight: bold;
-    margin: 0 15px;
-    padding: 10px 20px;
-    display: inline-block;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #555555;
+.nav-links a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: #fff; /* White text on hover */
     border-radius: 5px;
+}
+
+.nav-links a.active {
+    background-color: #4CAF50; /* Green background for active link */
+    color: #fff;
+    border-radius: 5px;
+}
+
+.nav-logo img {
+    height: 40px; /* Adjust logo size */
+    width: auto;
 }
 
 /* Main content styles */
@@ -71,6 +93,23 @@ ul li strong {
     color: #4CAF50;
 }
 
+.about-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 20px 20px;
+    text-align: left;
+}
+
+.about-list li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.about-list li strong {
+    color: #4CAF50;
+}
+
 /* Post styles */
 .post h2 {
     margin: 10px 0;
@@ -101,4 +140,71 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* About page container */
+.about-container {
+    background-color: #2c2c3e; /* Dark gray background */
+    color: #e4e4e7; /* Light gray text */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    max-width: 800px; /* Limit the width of the content */
+    margin: 50px auto; /* Center the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    text-align: left; /* Align text to the left */
+}
+
+/* About page heading */
+.about-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #4CAF50; /* Green color for emphasis */
+    text-align: center; /* Center-align the heading */
+}
+
+/* About list styles */
+.about-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-list li {
+    font-size: 1.2rem; /* Slightly larger font size */
+    margin-bottom: 15px; /* Add spacing between list items */
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Vertically align icon and text */
+    color: #fff; /* White text */
+}
+
+.about-list li i {
+    color: #4CAF50; /* Green color for icons */
+    margin-right: 10px; /* Add spacing between icon and text */
+    font-size: 1.5rem; /* Adjust icon size */
+}
+
+.about-list li strong {
+    color: #4CAF50; /* Highlight key information in green */
+}
+
+/* Link styles */
+.about-container a {
+    color: #4CAF50; /* Green link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-container a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 }
